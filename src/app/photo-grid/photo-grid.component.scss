@@ -1,0 +1,46 @@
+.main{
+    display: inline-grid;
+    grid-template-columns: auto auto
+}
+.grid {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fill, 151px);
+    grid-template-rows: repeat(30, auto);
+    background-color: rgb(162, 189, 187);
+    grid-auto-flow: column;
+    div {
+        display: inline-grid;
+        grid-template-rows: 10% 90%;
+        float: left;
+        grid-auto-flow: column;
+        text-overflow: ellipsis;
+        .title {
+            text-align: center;
+            grid-row-end: 2;
+            text-overflow: ellipsis;
+            color: black;
+            text-decoration: none;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+            white-space: nowrap;
+        }
+        .title:hover{
+            cursor: pointer;
+        }
+        img {
+            grid-row-start: 2;
+            
+        }
+        img:hover{
+            cursor: pointer;
+        }
+    }
+}
+.display{
+    position:fixed;
+    top: 0px;
+    right: 0px;
+    height: 5%;
+    width: auto;
+}
