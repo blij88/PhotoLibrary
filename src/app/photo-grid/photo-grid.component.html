@@ -1,9 +1,9 @@
 <div class="main">
-<div class="grid">
-    <div *ngFor="let photo of photos">
-        <a class="title"(click)="onClick(photo.id)">{{photo.title}}</a>
-        <img src="{{photo.thumbnailUrl}}" (click)="showImg(photo.id)">
+    <div class="grid">
+        <div *ngFor="let photo of photos">
+            <a class="title" (click)="onClick(photo.id)">{{photo.title}}</a>
+            <img src="{{photo.thumbnailUrl}}" (click)="showImg(photo.id)">
+        </div>
     </div>
-</div>
-<app-photo-detail *ngIf="this.show" class="display"></app-photo-detail>
+    <app-photo-detail *ngIf="this.show" class="display"></app-photo-detail>
 </div>

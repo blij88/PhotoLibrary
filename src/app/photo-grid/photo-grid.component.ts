@@ -21,12 +21,12 @@ export class PhotoGridComponent implements OnInit {
   }
 
   onClick(id: number) {
-    this.PhotoService.GetId(id, true)
+    this.PhotoService.SetValues(id, true)
     this.router.navigate(['/Photo'])
   }
   showImg(id: number) {
     console.log("at click")
-    this.PhotoService.GetId(id, false);
+    this.PhotoService.SetValues(id, false);
     this.show = true;
   }
 

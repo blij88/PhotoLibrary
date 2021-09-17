@@ -23,8 +23,8 @@ export class PhotoDetailComponent implements OnInit {
   }
 
   onClick() {
-    this.photoService.GetId(this.photo.id, false)
-    this.router.navigateByUrl('');
+    this.photoService.SetValues(10, false)
+    console.log(this.id, this.photo.id)
   }
 
 }
