@@ -26,8 +26,7 @@ changeBool = this.boolSource.asObservable()
     return this.httpClient.get<Photo[]>("https://jsonplaceholder.typicode.com/photos").pipe(map(x =>x.find(p => p.id === id)!));
   }
 
-  SetValues(id:number, bool: boolean){  
-    console.log("at services")  
+  SetValues(id:number, bool: boolean){ 
     this.idSource.next(id)
     this.boolSource.next(bool)
   }

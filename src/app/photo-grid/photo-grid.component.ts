@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { delay } from 'rxjs/operators';
 import { GetPhotosService } from '../core/get-photos.service';
 import { Photo } from '../core/Photo.model';
 
@@ -25,7 +26,6 @@ export class PhotoGridComponent implements OnInit {
     this.router.navigate(['/Photo'])
   }
   showImg(id: number) {
-    console.log("at click")
     this.PhotoService.SetValues(id, false);
     this.show = true;
   }
