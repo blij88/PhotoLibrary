@@ -23,7 +23,7 @@ changeBool = this.boolSource.asObservable()
   }
 
   GetPhotoById(id: number): Observable<Photo> {
-    return this.httpClient.get<Photo[]>("https://jsonplaceholder.typicode.com/photos").pipe(map(x =>x.find(p => p.id == id)!));
+    return this.httpClient.get<Photo[]>("https://jsonplaceholder.typicode.com/photos").pipe(map(x =>x.find(p => p.id === id)!));
   }
 
   SetValues(id:number, bool: boolean){  

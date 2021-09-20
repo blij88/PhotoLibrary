@@ -15,7 +15,7 @@ export class PhotoGridComponent implements OnInit {
   }
   ngOnInit(): void {
 
-    this.PhotoService.GetPhotos().subscribe(x => this.photos = x.slice(0, 50));
+    this.PhotoService.GetPhotos().subscribe(x => this.photos = x.slice(0, 200));
     this.show = false
 
   }

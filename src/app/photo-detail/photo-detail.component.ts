@@ -18,13 +18,13 @@ export class PhotoDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.photoService.chosenId.subscribe(x => this.id = x)
+    this.photoService.chosenId.subscribe(x=>this.photoService.GetPhotoById(x).subscribe(y => this.photo = y))
     this.photoService.changeBool.subscribe(x => this.visible = x)
-    this.photoService.GetPhotoById(this.id).subscribe(y => this.photo = y)
   }
 
   onClick() {
-    this.photoService.SetValues(10, false)
-    console.log(this.id, this.photo.id)
+    this.photoService.SetValues(this.photo.id, true);
+    this.router.navigateByUrl('');
   }
 
 }
